@@ -13,20 +13,20 @@ describe('Testando Calculadora Google', () => {
         const soma = 'accessibility id:plus';
         await $(soma).click()
 
-        const numero2 = '//android.widget.ImageButton[@content-desc="15"]';
+        const numero2 = '//android.widget.ImageButton[@content-desc="1"]';
         await $(numero2).click()
 
         const equals = 'accessibility id:equals';
         await $(equals).click();
 
         const resultado = 'id:com.google.android.calculator:id/result_final';
-        expect(await $(resultado).getText()).toEqual('20');
+        expect(await $(resultado).getText()).toEqual('6');
 
     });
 
     it('Subtração', async () => {
 
-        const numero1 = '//android.widget.ImageButton[@content-desc="10"]';
+        const numero1 = '//android.widget.ImageButton[@content-desc="9"]';
         await $(numero1).click()
 
         const subtração = 'accessibility id:minus';
@@ -39,7 +39,7 @@ describe('Testando Calculadora Google', () => {
         await $(equals).click();
 
         const resultado = 'id:com.google.android.calculator:id/result_final';
-        expect(await $(resultado).getText()).toEqual('3');
+        expect(await $(resultado).getText()).toEqual('2');
 
     });
 
@@ -64,13 +64,13 @@ describe('Testando Calculadora Google', () => {
 
     it('Divisão', async () => {
 
-        const numero1 = '//android.widget.ImageButton[@content-desc="12"]';
+        const numero1 = '//android.widget.ImageButton[@content-desc="8"]';
         await $(numero1).click()
 
         const divisao= 'accessibility id:divide';
         await $(divisao).click()
 
-        const numero2 = '//android.widget.ImageButton[@content-desc="4"]';
+        const numero2 = '//android.widget.ImageButton[@content-desc="2"]';
         await $(numero2).click()
 
         const equals = 'accessibility id:equals';
